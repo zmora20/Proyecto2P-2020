@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Restaurante.Usuario;
+package Restaurante;
 
 /**
  *
- * @author zaida
+ * @author Fabricio
  */
-public class Mesa {
+public class Platos {
+    private String nombrePlato;
+    private double precio;
     
 }
