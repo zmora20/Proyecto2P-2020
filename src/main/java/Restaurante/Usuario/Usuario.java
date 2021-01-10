@@ -12,7 +12,19 @@ package Restaurante.Usuario;
 public class Usuario {
     private String correoElectronico;
     private String contrasenia;
+
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
+
+    public String getContrasenia() {
+        return contrasenia;
+    }
     
+    public Usuario(String correo,String contra){
+        this.contrasenia=contra;
+        this.correoElectronico=correo;
+    }
     
     
 }

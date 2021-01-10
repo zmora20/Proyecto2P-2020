@@ -5,9 +5,14 @@
  */
 package com.pooespol.proy2p;
 
+import Restaurante.*;
+import Restaurante.Usuario.*;
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -28,6 +33,7 @@ public class InicioController implements Initializable {
     private PasswordField txtContra;
     @FXML
     private Button Inicio;
+    restaurante res=new restaurante();
 
     /**
      * Initializes the controller class.
@@ -35,12 +41,24 @@ public class InicioController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+    } 
+    
 
     @FXML
-    private void inicioSesion(MouseEvent event) {
+    private void inicioSesion(MouseEvent event) throws IOException {
+        
         String usuario=txtUsuario.getText();
         String Contrase=txtContra.getPromptText();
+        ArrayList<Usuario> lista=res.generarLista();
+        for (Usuario usu:lista){
+            if(usuario.equals(usu.getCorreoElectronico())&& Contrase.equals(usu.getContrasenia())){
+                if (usu instanceof Administrador){
+                    App.setRoot("InterfazAdmin");
+                }
+                
+            }
+        }
+        
     }
     
 }
