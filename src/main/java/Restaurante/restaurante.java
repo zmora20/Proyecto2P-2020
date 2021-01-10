@@ -5,6 +5,7 @@
  */
 package Restaurante;
 
+import Restaurante.Usuario.*;
 import java.util.ArrayList;
 
 /**
@@ -14,5 +15,6 @@ import java.util.ArrayList;
  
 public class restaurante {
     public static ArrayList<Platos> menu;
+    public ArrayList<Usuario> empleados;
     
 }

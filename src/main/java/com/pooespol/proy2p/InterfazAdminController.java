@@ -10,24 +10,22 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
  *
- * @author zaida
+ * @author Fabricio
  */
-public class InicioController implements Initializable {
+public class InterfazAdminController implements Initializable {
 
     @FXML
-    private TextField txtUsuario;
+    private Button opcion1;
     @FXML
-    private PasswordField txtContra;
+    private Button opcion2;
     @FXML
-    private Button Inicio;
+    private Button opcion3;
+    @FXML
+    private Button opcion4;
 
     /**
      * Initializes the controller class.
@@ -36,11 +34,5 @@ public class InicioController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    @FXML
-    private void inicioSesion(MouseEvent event) {
-        String usuario=txtUsuario.getText();
-        String Contrase=txtContra.getPromptText();
-    }
     
 }
