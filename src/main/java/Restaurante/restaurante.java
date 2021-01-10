@@ -32,8 +32,6 @@ public class restaurante {
             
             URL u = App.class.getResource(ruta);
             File file = new File(u.toURI());
-            System.out.println("URL: "+u);
-            System.out.println("Archivo: "+file);
             
             try(BufferedReader bf = new BufferedReader(new FileReader(file))) {
                 String linea;
@@ -46,7 +44,7 @@ public class restaurante {
                     }else if (partes[3].equals("ADMINISTRADOR")){
                         Administrador admin=new Administrador(partes[0],partes[1],partes[2]);
                         lista.add(admin);
-                        }else{
+                    }else{
                         System.out.println("AQUI ERR");
                     }
                 }

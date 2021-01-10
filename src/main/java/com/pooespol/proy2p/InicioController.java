@@ -48,13 +48,18 @@ public class InicioController implements Initializable {
     private void inicioSesion(MouseEvent event) throws IOException {
         
         String usuario=txtUsuario.getText();
-        String Contrase=txtContra.getPromptText();
+        String Contrase=txtContra.getText();
         ArrayList<Usuario> lista=res.generarLista();
-        for (Usuario usu:lista){
+        for (Usuario usu:lista){      
+            System.out.println("esta qui :"+usu);
             if(usuario.equals(usu.getCorreoElectronico())&& Contrase.equals(usu.getContrasenia())){
+                
                 if (usu instanceof Administrador){
                     App.setRoot("InterfazAdmin");
                 }
+                else if (usu instanceof Mesero)
+                    
+                    App.setRoot("InterfazMesero");
                 
             }
         }
