@@ -9,7 +9,7 @@
    <children>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button fx:id="opcion1" mnemonicParsing="false" text="Monitoreo del restaurante">
+            <Button fx:id="opcion1" mnemonicParsing="false" onMouseClicked="#monitoreo" text="Monitoreo del restaurante">
                <font>
                   <Font name="Century" size="23.0" />
                </font></Button>

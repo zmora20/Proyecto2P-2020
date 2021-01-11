@@ -5,11 +5,13 @@
  */
 package com.pooespol.proy2p;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -34,5 +36,10 @@ public class InterfazAdminController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void monitoreo(MouseEvent event) throws IOException {
+        App.setRoot("mesas");
+    }
     
 }
