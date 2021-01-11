@@ -5,9 +5,13 @@
  */
 package com.pooespol.proy2p;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 
 /**
  * FXML Controller class
@@ -15,6 +19,19 @@ import javafx.fxml.Initializable;
  * @author Fabricio
  */
 public class InterfazMeseroController implements Initializable {
+    
+    @FXML
+    private Button opcionMesero1;
+    
+    @FXML
+    private Button opcionMesero2;
+    
+    @FXML
+    private Button opcionMesero3;
+    
+    @FXML
+    private Button opcionMesero4;
+    
 
     /**
      * Initializes the controller class.
@@ -22,6 +39,16 @@ public class InterfazMeseroController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+   
+    }
+    
+    @FXML
+    private void mostrarBebidas(MouseEvent event) throws IOException{
+        App.setRoot("bebidas");
+        
+        
+    }
+
+    
     
 }

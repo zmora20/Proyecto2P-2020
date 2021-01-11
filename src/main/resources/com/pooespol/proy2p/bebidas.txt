@@ -1,0 +1,12 @@
+nombre;precio;imagen
+Bloody Mary;5.84;Bloody Mary.JPG
+Caipirinha;5.84;Caipirinha.jpg
+Capuccino;3.66;Capuccino.JPG
+Coffee;3.66;Coffee.JPG
+Cosmopolitan;5.84;Cosmopolitan.JPG
+Cuba Libre;5.84;Cuba Libre.jpg
+Daiquiri;5.84;Daiquiri.JPG
+Espresso;3.66;Espresso.jpg
+Green Tea;3.66;Green Tea.JPG
+Irish Coffee;3.66;Irish Coffee.jpg
+Manhattan;5.84;Manhattan.PNG
