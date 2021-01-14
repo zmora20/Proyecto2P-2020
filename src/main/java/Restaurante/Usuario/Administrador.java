@@ -11,7 +11,6 @@ package Restaurante.Usuario;
  */
 public class Administrador extends Usuario{
     private String nombreAdmon;
-    private String funcion;
     
     public Administrador(String correoElectronico,String contrasenia,
             String nombre){

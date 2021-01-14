@@ -11,7 +11,7 @@ package Restaurante.Usuario;
  */
 public class Mesero extends Usuario{
     private String nombreMesero;
-    private String funcion;
+    
     
     public Mesero(String correoElectronico,String contrasenia,String nombre){
         super(correoElectronico,contrasenia);

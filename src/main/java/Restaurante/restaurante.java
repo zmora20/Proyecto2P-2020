@@ -9,7 +9,6 @@ import Restaurante.Usuario.*;
 import com.pooespol.proy2p.App;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
@@ -44,8 +43,6 @@ public class restaurante {
                     }else if (partes[3].equals("ADMINISTRADOR")){
                         Administrador admin=new Administrador(partes[0],partes[1],partes[2]);
                         lista.add(admin);
-                    }else{
-                        System.out.println("AQUI ERR");
                     }
                 }
             }
