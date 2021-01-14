@@ -12,5 +12,28 @@ package Restaurante;
 public class Platos {
     private String nombrePlato;
     private double precio;
+    private String imagen;
+    
+    
+    
+    
+    
+    public Platos(String nombre,double  precio, String imagen){
+        this.nombrePlato=nombre;
+        this.precio=precio;
+        this.imagen=imagen;
+    }
+
+    public String getNombrePlato() {
+        return nombrePlato;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public String getImagen() {
+        return imagen;
+    }
     
 }

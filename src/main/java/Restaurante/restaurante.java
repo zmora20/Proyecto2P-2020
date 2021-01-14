@@ -22,6 +22,7 @@ import java.util.ArrayList;
 public class restaurante {
     public static ArrayList<Platos> menu;
     static String ruta = "usuarios.txt";
+    static String ruta2 = "bebidas.txt";
         
     
     public ArrayList<Usuario> generarLista() throws IOException{
@@ -52,4 +53,45 @@ public class restaurante {
         return lista;
     }
     
-}
+    
+    
+    
+    
+     public static ArrayList<Platos> leerbebidas() 
+            throws IOException{
+        ArrayList<Platos> bebidas = new ArrayList<>();
+        //usamos BufferedReader para leer archivos
+        try{
+            //System.out.println("Primera partes");
+            URL u = App.class.getResource(ruta2);
+            File file = new File(u.toURI());
+            //System.out.println("Segunda partes");
+            try(BufferedReader bf = new BufferedReader(new FileReader(file))) {
+                String linea;
+                //leemos el archivo liena a linea con la funcion readline
+                while((linea=bf.readLine())!=null){
+                    //System.out.println(linea);
+                    String[] partes=linea.split(";");
+                    Platos plat=new Platos(partes[0],Double.parseDouble(partes[1])
+                            ,partes[2]);
+                    bebidas.add(plat);
+                    
+
+                }
+            } 
+            
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
+        return bebidas;
+    }
+    
+    
+    
+    }
+    
+    
+    
+    
+    
+
