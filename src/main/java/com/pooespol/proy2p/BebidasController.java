@@ -49,23 +49,25 @@ public class BebidasController implements Initializable {
         
         
         
-    }   
+    } 
+    /*
     @FXML
-    private void mostrarPeliculaGenero(ActionEvent event) {
-        //obtener el elemento que fue seleccionado en el combo
+    private void mostrarBebidas (ActionEvent event) {        
+//obtener el elemento que fue seleccionado en el combo
         
         
         //elemino el contenido anterios del flowPane
+        
         panelBebidas.getChildren().clear();
         
         /*
         //mostrar en el FlowPane panelPeliculas el nombre del genero seleccionado
         Label l = new Label(genero.getNombre());
-        panelPeliculas.getChildren().add(l);*/
+        panelPeliculas.getChildren().add(l);
         
         try {
             //obtengo la lista de peliculas del genero seleccionado
-            List<Platos> bebidas = restaurante.leerbebidas();
+            List<Platos> bebidas = restaurante1.menu;
             for(Platos p: bebidas){
                 VBox vboxpelicula = new VBox();
                 //crear la imagen
@@ -90,6 +92,6 @@ public class BebidasController implements Initializable {
         }
         
         
-    }
+    }*/
     
 }

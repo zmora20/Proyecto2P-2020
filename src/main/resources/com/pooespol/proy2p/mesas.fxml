@@ -1,24 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="496.0" prefWidth="679.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Circle fill="#f9ff53" layoutX="121.0" layoutY="119.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#e9ff00" layoutX="279.0" layoutY="119.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#eeff1a" layoutX="112.0" layoutY="296.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#e5ff1f" layoutX="279.0" layoutY="296.0" radius="70.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#e8ec0f" layoutX="422.0" layoutY="206.0" radius="61.0" stroke="BLACK" strokeType="INSIDE" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="408.0" layoutX="570.0" layoutY="52.0" stroke="BLACK" strokeType="INSIDE" width="58.0" />
-      <Text layoutX="558.0" layoutY="263.0" rotate="-90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COCINA" wrappingWidth="81.33074951171875">
-         <font>
-            <Font name="Century" size="18.0" />
-         </font>
-      </Text>
-   </children>
-</Pane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="508.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proy2p.MesasController">
+   <top>
+      <HBox prefHeight="49.0" prefWidth="605.0" BorderPane.alignment="CENTER" />
+   </top>
+   <center>
+      <Pane fx:id="circulos" prefHeight="251.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </center>
+   <bottom>
+      <HBox prefHeight="85.0" prefWidth="666.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="comensales" text="Label">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="facturado" text="Label">
+                     <font>
+                        <Font name="Century" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children></HBox>
+   </bottom>
+</BorderPane>

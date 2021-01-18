@@ -1,0 +1,2 @@
+rojo;1;4;frquimis
+amarillo;2;5;null

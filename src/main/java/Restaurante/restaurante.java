@@ -20,12 +20,13 @@ import java.util.ArrayList;
  */
  
 public class restaurante {
-    public static ArrayList<Platos> menu;
+    public static ArrayList<Platos> menu=leerbebidas();
     static String ruta = "usuarios.txt";
     static String ruta2 = "bebidas.txt";
+    static String ruta3 = "infomesas.txt";
         
     
-    public ArrayList<Usuario> generarLista() throws IOException{
+    public static ArrayList<Usuario> generarLista() throws IOException{
         ArrayList<Usuario> lista = new ArrayList<>();
         //usamos BufferedReader para leer archivos
         try{
@@ -57,8 +58,7 @@ public class restaurante {
     
     
     
-     public static ArrayList<Platos> leerbebidas() 
-            throws IOException{
+     public static ArrayList<Platos> leerbebidas() {
         ArrayList<Platos> bebidas = new ArrayList<>();
         //usamos BufferedReader para leer archivos
         try{
@@ -85,10 +85,41 @@ public class restaurante {
         }
         return bebidas;
     }
-    
-    
-    
+     public static ArrayList<Mesas> leerMesas() {
+        ArrayList<Mesas> mesas = new ArrayList<>();
+        //usamos BufferedReader para leer archivos
+        try{
+            //System.out.println("Primera partes");
+            URL u = App.class.getResource(ruta3);
+            File file = new File(u.toURI());
+            //System.out.println("Segunda partes");
+            try(BufferedReader bf = new BufferedReader(new FileReader(file))) {
+                String linea;
+                //leemos el archivo liena a linea con la funcion readline
+                while((linea=bf.readLine())!=null){
+                    //System.out.println(linea);
+                    String[] partes=linea.split(";");
+                    int numero=Integer.parseInt(partes[1]);
+                    int capacidad=Integer.parseInt(partes[2]);
+                    if (!partes[3].equals("null")){
+                        Mesas mes=new Mesas(partes[0],numero,capacidad,partes[3]);
+                                    mesas.add(mes);
+                    }else{
+                        Mesas mes=new Mesas(partes[0],numero,capacidad);
+                                    mesas.add(mes);
+                    }
+                }
+            } 
+            
+        }catch(Exception ex){
+            System.out.println(ex);
+        }
+        return mesas;
     }
+    
+    
+    
+}
     
     
     
