@@ -42,7 +42,27 @@ public class BebidasController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+<<<<<<< Updated upstream
       
+=======
+    }
+
+    /*
+    @FXML
+    private void mostrarBebidas (ActionEvent event) {        
+//obtener el elemento que fue seleccionado en el combo
+        
+        
+        //elemino el contenido anterios del flowPane
+        
+        panelBebidas.getChildren().clear();
+        
+        /*
+        //mostrar en el FlowPane panelPeliculas el nombre del genero seleccionado
+        Label l = new Label(genero.getNombre());
+        panelPeliculas.getChildren().add(l);
+        
+>>>>>>> Stashed changes
         try {
             //obtengo la lista de peliculas del genero seleccionado
             List<Platos> bebidas = restaurante.menu;

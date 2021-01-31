@@ -10,16 +10,14 @@ package Restaurante.Usuario;
  * @author zaida
  */
 public class Mesero extends Usuario{
-    private String nombreMesero;
+    
     
     
     public Mesero(String correoElectronico,String contrasenia,String nombre){
-        super(correoElectronico,contrasenia);
-        this.nombreMesero=nombre;
+        super(correoElectronico,contrasenia,nombre);
+        
     }
 
-    public String getNombreMesero() {
-        return nombreMesero;
-    }
+    
     
 }

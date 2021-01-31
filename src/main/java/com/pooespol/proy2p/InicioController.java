@@ -50,8 +50,7 @@ public class InicioController implements Initializable {
         String usuario=txtUsuario.getText();
         String Contrase=txtContra.getText();
         ArrayList<Usuario> lista=res.generarLista();
-        for (Usuario usu:lista){      
-            System.out.println("esta qui :"+usu);
+        for (Usuario usu:lista){  
             if(usuario.equals(usu.getCorreoElectronico())&& Contrase.equals(usu.getContrasenia())){
                 
                 if (usu instanceof Administrador){
@@ -64,6 +63,22 @@ public class InicioController implements Initializable {
             }
         }
         
+    }
+
+    public String getTxtUsuario() {
+        return txtUsuario.getText();
+    }
+
+    public void setTxtUsuario(TextField txtUsuario) {
+        this.txtUsuario = txtUsuario;
+    }
+
+    public PasswordField getTxtContra() {
+        return txtContra;
+    }
+
+    public void setTxtContra(PasswordField txtContra) {
+        this.txtContra = txtContra;
     }
     
 }

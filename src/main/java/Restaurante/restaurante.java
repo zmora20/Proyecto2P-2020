@@ -26,7 +26,7 @@ public class restaurante {
     static String ruta3 = "infomesas.txt";
         
     
-    public static ArrayList<Usuario> generarLista() throws IOException{
+    public static ArrayList<Usuario> generarLista(){
         ArrayList<Usuario> lista = new ArrayList<>();
         //usamos BufferedReader para leer archivos
         try{
@@ -49,7 +49,7 @@ public class restaurante {
                 }
             }
         }catch(Exception ex){
-            System.out.println("Excepcion es: "+ex);
+            System.out.println(ex);
         }
         return lista;
     }
@@ -87,6 +87,7 @@ public class restaurante {
     }
      public static ArrayList<Mesas> leerMesas() {
         ArrayList<Mesas> mesas = new ArrayList<>();
+        
         //usamos BufferedReader para leer archivos
         try{
             //System.out.println("Primera partes");
@@ -97,16 +98,23 @@ public class restaurante {
                 String linea;
                 //leemos el archivo liena a linea con la funcion readline
                 while((linea=bf.readLine())!=null){
-                    //System.out.println(linea);
                     String[] partes=linea.split(";");
                     int numero=Integer.parseInt(partes[1]);
                     int capacidad=Integer.parseInt(partes[2]);
                     if (!partes[3].equals("null")){
-                        Mesas mes=new Mesas(partes[0],numero,capacidad,partes[3]);
-                                    mesas.add(mes);
+                        for(Usuario usx:generarLista()){
+                            if (usx instanceof Mesero){
+                                Mesero m=(Mesero)usx;
+                                Mesas mes=new Mesas(partes[0],numero,capacidad,
+                                m);
+                                mesas.add(mes);
+                            }
+                            
+                        }
+                        
                     }else{
                         Mesas mes=new Mesas(partes[0],numero,capacidad);
-                                    mesas.add(mes);
+                        mesas.add(mes);
                     }
                 }
             } 

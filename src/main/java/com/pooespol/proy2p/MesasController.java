@@ -39,15 +39,20 @@ public class MesasController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         ArrayList<Mesas> mesas=res.leerMesas();
-        int contador;
+        int contadorX=0;
+        int contadorY=0;
         for (Mesas it:mesas){
-            System.out.println(it.color);
+            //System.out.println(it.color);
             if (it.color.equals("rojo")){
                 Circle c= new Circle(it.getCapacidadMesa()*10,Color.RED);
                 Label l=new Label(String.valueOf(it.getNumeroMesa()));
                 StackPane st=new StackPane();
                 st.getChildren().addAll(c,l);
                 circulos.getChildren().add(st);
+                st.setLayoutX(contadorX*10);
+                st.setLayoutY(contadorY*10);
+                contadorX++;
+                contadorY++;
             }else{
                 Circle c= new Circle(it.getCapacidadMesa()*10,Color.YELLOW);
                 Label l=new Label(String.valueOf(it.getNumeroMesa()));
@@ -55,6 +60,10 @@ public class MesasController implements Initializable {
                 st.getChildren().addAll(c,l);
                 
                 circulos.getChildren().add(st);
+                st.setLayoutX(contadorX*20);
+                st.setLayoutY(contadorY*100);
+                contadorX++;
+                contadorY++;
             }
             
             

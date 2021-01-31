@@ -10,6 +10,7 @@ package Restaurante.Usuario;
  * @author zaida
  */
 public class Usuario {
+    private String nombre;
     private String correoElectronico;
     private String contrasenia;
 
@@ -20,10 +21,13 @@ public class Usuario {
     public String getContrasenia() {
         return contrasenia;
     }
-    
-    public Usuario(String correo,String contra){
+    public String getNombreMesero() {
+        return nombre;
+    }
+    public Usuario(String correo,String contra,String nombre){
         this.contrasenia=contra;
         this.correoElectronico=correo;
+        this.nombre=nombre;
     }
     
     

@@ -10,12 +10,10 @@ package Restaurante.Usuario;
  * @author zaida
  */
 public class Administrador extends Usuario{
-    private String nombreAdmon;
     
     public Administrador(String correoElectronico,String contrasenia,
             String nombre){
-        super(correoElectronico,contrasenia);
-        this.nombreAdmon=nombre;
+        super(correoElectronico,contrasenia,nombre);
     }
     
     

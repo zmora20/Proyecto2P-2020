@@ -15,8 +15,9 @@ public class Mesas {
     public String color;
     private int numeroMesa;
     private int capacidadMesa;
-    public String mesero;
-    public Mesas(String color,int numMesa,int Capacidad,String meses ){
+    public Mesero mesero;
+    
+    public Mesas(String color,int numMesa,int Capacidad,Mesero meses ){
         this.color=color;
         this.capacidadMesa=Capacidad;
         this.numeroMesa=numMesa;
