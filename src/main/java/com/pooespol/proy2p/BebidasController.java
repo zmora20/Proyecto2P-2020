@@ -35,56 +35,36 @@ public class BebidasController implements Initializable {
     private TextField nombreBebida;
     
     @FXML
-    private FlowPane panelBebidas;
+    private FlowPane x;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        
-        
-        
-        
-        
-        
-    } 
-    /*
-    @FXML
-    private void mostrarBebidas (ActionEvent event) {        
-//obtener el elemento que fue seleccionado en el combo
-        
-        
-        //elemino el contenido anterios del flowPane
-        
-        panelBebidas.getChildren().clear();
-        
-        /*
-        //mostrar en el FlowPane panelPeliculas el nombre del genero seleccionado
-        Label l = new Label(genero.getNombre());
-        panelPeliculas.getChildren().add(l);
-        
+      
         try {
             //obtengo la lista de peliculas del genero seleccionado
-            List<Platos> bebidas = restaurante1.menu;
+            List<Platos> bebidas = restaurante.menu;
             for(Platos p: bebidas){
-                VBox vboxpelicula = new VBox();
+                VBox vboxbebida = new VBox();
                 //crear la imagen
                 InputStream inputImg= App.class.getResource(p.getImagen()).openStream();
                 ImageView imgv = new ImageView(new Image(inputImg));
-                vboxpelicula.getChildren().add(imgv);
+                vboxbebida.getChildren().add(imgv);
                 
                 //crea el label del nombre y lo agrego al VBox
                 Label lnombre = new Label(p.getNombrePlato());
-                vboxpelicula.getChildren().add(lnombre);
-                //el anio de la pelicula
-               
-                
-                vboxpelicula.setPadding(new Insets(2,3,3,4));
+                vboxbebida.getChildren().add(lnombre);
+                String pre=String.valueOf(p.getPrecio());
+                Label lprecio = new Label(pre);
+                vboxbebida.getChildren().add(lprecio);
+
+                              
+                //vboxpelicula.setPadding(new Insets(2,3,3,4));
                 
                 //agregamos el VBox de la pelicula al FlowPane
-                panelBebidas.getChildren().add(vboxpelicula);
+                x.getChildren().add(vboxbebida);
                 
             }
         } catch (IOException ex) {
@@ -92,6 +72,12 @@ public class BebidasController implements Initializable {
         }
         
         
-    }*/
+        
+        
+        
+        
+    } 
+    
+    
     
 }
