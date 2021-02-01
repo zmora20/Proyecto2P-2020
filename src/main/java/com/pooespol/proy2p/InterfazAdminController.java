@@ -95,6 +95,11 @@ public class InterfazAdminController implements Initializable {
         }
     }    
 
+    @FXML
+    private void consultarVentas(MouseEvent event) throws IOException {
+        App.setRoot("reporteventas");
+    }
+
     
     
 }
