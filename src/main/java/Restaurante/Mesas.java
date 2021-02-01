@@ -17,11 +17,11 @@ public class Mesas {
     private int capacidadMesa;
     public Mesero mesero;
     
-    public Mesas(String color,int numMesa,int Capacidad,Mesero meses ){
+    public Mesas(String color,int numMesa,int Capacidad,Mesero mesero ){
         this.color=color;
         this.capacidadMesa=Capacidad;
         this.numeroMesa=numMesa;
-        meses=mesero;
+        this.mesero=mesero;
     }
     public Mesas(String color,int numMesa,int Capacidad ){
         this.color=color;

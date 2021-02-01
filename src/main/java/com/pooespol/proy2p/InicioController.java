@@ -15,6 +15,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
@@ -34,6 +35,8 @@ public class InicioController implements Initializable {
     @FXML
     private Button Inicio;
     restaurante res=new restaurante();
+    @FXML
+    private Label nohay;
 
     /**
      * Initializes the controller class.
@@ -50,19 +53,25 @@ public class InicioController implements Initializable {
         String usuario=txtUsuario.getText();
         String Contrase=txtContra.getText();
         ArrayList<Usuario> lista=res.generarLista();
-        for (Usuario usu:lista){  
+        for (Usuario usu:lista){
+            if (usu instanceof Mesero){
+                
+                
+                } 
+            //System.out.println(usu.getCorreoElectronico());
             if(usuario.equals(usu.getCorreoElectronico())&& Contrase.equals(usu.getContrasenia())){
                 
                 if (usu instanceof Administrador){
                     App.setRoot("InterfazAdmin");
                 }
-                else if (usu instanceof Mesero)
+                else if (usu instanceof Mesero){
                     App.setRoot("InterfazMesero");
+                }                
+            
                 
-            }else{
-                App.setRoot("nohay");
             }
         }
+        nohay.setText("credenciales invalidas");
         
     }
 

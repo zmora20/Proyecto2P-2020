@@ -7,22 +7,27 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proy2p.InicioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proy2p.InicioController">
    <children>
-      <Label alignment="TOP_CENTER" layoutX="105.0" layoutY="192.0" prefHeight="17.0" prefWidth="84.0" text="Password">
+      <Label alignment="TOP_CENTER" layoutX="173.0" layoutY="192.0" prefHeight="17.0" prefWidth="84.0" text="Password" AnchorPane.rightAnchor="443.0">
          <font>
             <Font name="Century" size="18.0" />
          </font></Label>
-      <Label alignment="TOP_CENTER" layoutX="59.0" layoutY="144.0" prefHeight="23.0" prefWidth="176.0" text="Correo Electronico" textAlignment="CENTER">
+      <Label alignment="TOP_CENTER" layoutX="127.0" layoutY="155.0" prefHeight="23.0" prefWidth="176.0" text="Correo Electronico" textAlignment="CENTER">
          <font>
             <Font name="Century" size="18.0" />
          </font></Label>
-      <TextField fx:id="txtUsuario" layoutX="261.0" layoutY="143.0" />
-      <PasswordField fx:id="txtContra" layoutX="261.0" layoutY="191.0" />
-      <Button fx:id="Inicio" layoutX="223.0" layoutY="264.0" mnemonicParsing="false" onMouseClicked="#inicioSesion" text="Iniciar Sesion">
+      <TextField fx:id="txtUsuario" layoutX="348.0" layoutY="154.0" />
+      <PasswordField fx:id="txtContra" layoutX="348.0" layoutY="191.0" />
+      <Button fx:id="Inicio" layoutX="278.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#inicioSesion" text="Iniciar Sesion">
          <font>
             <Font size="20.0" />
          </font>
       </Button>
+      <Label fx:id="nohay" alignment="TOP_CENTER" layoutX="232.0" layoutY="261.0" prefHeight="25.0" prefWidth="253.0" text="Restaurante ">
+         <font>
+            <Font name="Century" size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

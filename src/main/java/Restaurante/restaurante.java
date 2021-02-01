@@ -9,6 +9,7 @@ import Restaurante.Usuario.*;
 import com.pooespol.proy2p.App;
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.URL;
@@ -26,7 +27,7 @@ public class restaurante {
     static String ruta3 = "infomesas.txt";
         
     
-    public static ArrayList<Usuario> generarLista(){
+    public static ArrayList<Usuario> generarLista()throws IOException{
         ArrayList<Usuario> lista = new ArrayList<>();
         try{      
             URL u = App.class.getResource(ruta);
@@ -45,9 +46,13 @@ public class restaurante {
                         lista.add(admin);
                     }
                 }
+            }catch (FileNotFoundException ex) {
+                System.out.println(ex.getMessage());
+                throw ex;
             }
         }catch(Exception ex){
             System.out.println(ex);
+            
         }
         return lista;
     }
@@ -69,7 +74,6 @@ public class restaurante {
                 String linea;
                 //leemos el archivo liena a linea con la funcion readline
                 while((linea=bf.readLine())!=null){
-                    //System.out.println(linea);
                     String[] partes=linea.split(";");
                     Platos plat=new Platos(partes[0],Double.parseDouble(partes[1])
                             ,partes[2]);
@@ -100,13 +104,15 @@ public class restaurante {
                     String[] partes=linea.split(";");
                     int numero=Integer.parseInt(partes[1]);
                     int capacidad=Integer.parseInt(partes[2]);
-                    if (!partes[3].equals("null")){
+                    if (!partes[3].equals("X")){
                         for(Usuario usx:generarLista()){
                             if (usx instanceof Mesero){
-                                Mesero m=(Mesero)usx;
-                                Mesas mes=new Mesas(partes[0],numero,capacidad,
-                                m);
-                                mesas.add(mes);
+                                if(((Mesero) usx).GetIdentificacion().equals(partes[3])){
+                                    Mesero m=(Mesero)usx;
+                                    Mesas mes=new Mesas(partes[0],numero,capacidad,
+                                    m);
+                                    mesas.add(mes);
+                                }
                             }
                             
                         }
@@ -120,6 +126,9 @@ public class restaurante {
             
         }catch(Exception ex){
             System.out.println(ex);
+        }
+        for(Mesas m:mesas){
+            System.out.println(m.mesero);
         }
         return mesas;
     }

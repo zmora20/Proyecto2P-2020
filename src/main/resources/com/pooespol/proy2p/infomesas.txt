@@ -1,6 +1,6 @@
-rojo;1;4;frquimis
-amarillo;2;5;null
-amarillo;3;3;null
-rojo;4;2;frquimis
-rojo;5;2;null
-amarillo;3;3;null
+rojo;1;4;fabricio
+amarillo;2;5;X
+amarillo;3;3;X
+rojo;4;2;fabricio
+rojo;5;2;X
+amarillo;6;3;X

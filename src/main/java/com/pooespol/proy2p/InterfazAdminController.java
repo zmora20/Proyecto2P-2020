@@ -6,6 +6,7 @@
 package com.pooespol.proy2p;
 
 import Restaurante.Mesas;
+import Restaurante.Usuario.Mesero;
 import Restaurante.restaurante;
 import java.io.IOException;
 import java.net.URL;
@@ -57,6 +58,9 @@ public class InterfazAdminController implements Initializable {
         int contadorX=0;
         int contadorY=50;
         for (Mesas it:mesas){
+            //Mesero mer=it.mesero;
+            //System.out.println(mer);
+            
             if (it.color.equals("rojo")){
                 Circle c= new Circle(it.getCapacidadMesa()*9,Color.RED);
                 Label l=new Label(String.valueOf(it.getNumeroMesa()));
@@ -116,17 +120,25 @@ public class InterfazAdminController implements Initializable {
     } 
     
     public void cargarDatos(Mesas mesa){
-        try{
-            //String n=mesa.mesero.GetIdentificacion();
-        
-            Label l1=new Label("Capacidad de Mesa: "+String.valueOf(mesa.getCapacidadMesa()));
-            Label l2=new Label("# de mesa: "+String.valueOf(mesa.getNumeroMesa()));
-            VBox v=new VBox(l1,l2);
-            informacion.getChildren().add(v);
-        }catch(NullPointerException ex){
-            ex.getMessage();
-        }
-           
+     
+            Mesero m=mesa.mesero;
+            String nombre=m.GetIdentificacion();
+            
+            if (!m.equals(null)){
+                Label l1=new Label("Capacidad de Mesa: "+String.valueOf(mesa.getCapacidadMesa()));
+                Label l2=new Label("# de mesa: "+String.valueOf(mesa.getNumeroMesa()));
+                Label l=new Label("Mesero: "+nombre);
+                VBox v=new VBox(l1,l2,l);
+                informacion.getChildren().add(v);
+                
+            }else{
+                Label la=new Label("Capacidad de Mesa: "+String.valueOf(mesa.getCapacidadMesa()));
+                Label la1=new Label("# de mesa: "+String.valueOf(mesa.getNumeroMesa()));
+                VBox va=new VBox(la,la1);
+                informacion.getChildren().add(va);
+            }
+                
+            
         
         
         
@@ -140,6 +152,17 @@ public class InterfazAdminController implements Initializable {
     @FXML
     private void consultarVentas(MouseEvent event) throws IOException {
         App.setRoot("reporteventas");
+    }
+
+    @FXML
+    private void crearMesa(MouseEvent event) {
+        /*circulos.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        
+                    }
+        
+                    }*/
     }
 
     
