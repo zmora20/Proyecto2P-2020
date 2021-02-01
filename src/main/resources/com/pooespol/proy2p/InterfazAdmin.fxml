@@ -6,6 +6,8 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.Pane?>
 
+<?import javafx.scene.layout.VBox?>
+
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pooespol.proy2p.InterfazAdminController">
    <top>
       <FlowPane alignment="CENTER" columnHalignment="CENTER" prefHeight="44.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -30,7 +32,7 @@
                   <Insets right="30.0" />
                </FlowPane.margin>
             </Button>
-            <Button fx:id="OPC5" mnemonicParsing="false" prefHeight="43.0" prefWidth="47.0" text="SALIR" />
+            <Button fx:id="OPC5" mnemonicParsing="false" onMouseClicked="#volver" prefHeight="43.0" prefWidth="47.0" text="SALIR" />
          </children>
          <padding>
             <Insets right="10.0" />
@@ -40,4 +42,7 @@
    <center>
       <Pane fx:id="circulos" prefHeight="348.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
    </center>
+   <right>
+      <VBox fx:id="informacion" prefHeight="356.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+   </right>
 </BorderPane>

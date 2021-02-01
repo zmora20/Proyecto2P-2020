@@ -11,13 +11,16 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
@@ -42,6 +45,8 @@ public class InterfazAdminController implements Initializable {
     @FXML
     private Pane circulos;
     private static restaurante res=new restaurante();
+    @FXML
+    private VBox informacion;
 
     /**
      * Initializes the controller class.
@@ -58,6 +63,14 @@ public class InterfazAdminController implements Initializable {
                 StackPane st=new StackPane();
                 st.getChildren().addAll(c,l);
                 circulos.getChildren().add(st);
+                st.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        cargarDatos(it);
+                    }
+                });
+                
+                
                 if (contadorX<4){
                     st.setLayoutX((contadorX*100)+50);
                     st.setLayoutY(contadorY);
@@ -78,6 +91,13 @@ public class InterfazAdminController implements Initializable {
                 st.getChildren().addAll(c,l);
                 
                 circulos.getChildren().add(st);
+                
+                st.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        cargarDatos(it);
+                    }
+                });
                 if (contadorX<=4){
                     st.setLayoutX((contadorX*100)+50);
                     st.setLayoutY(contadorY);
@@ -93,7 +113,29 @@ public class InterfazAdminController implements Initializable {
             
             
         }
-    }    
+    } 
+    
+    public void cargarDatos(Mesas mesa){
+        try{
+            //String n=mesa.mesero.GetIdentificacion();
+        
+            Label l1=new Label("Capacidad de Mesa: "+String.valueOf(mesa.getCapacidadMesa()));
+            Label l2=new Label("# de mesa: "+String.valueOf(mesa.getNumeroMesa()));
+            VBox v=new VBox(l1,l2);
+            informacion.getChildren().add(v);
+        }catch(NullPointerException ex){
+            ex.getMessage();
+        }
+           
+        
+        
+        
+    }
+
+    @FXML
+    private void volver(MouseEvent event) throws IOException {
+        App.setRoot("inicio");
+    }
 
     @FXML
     private void consultarVentas(MouseEvent event) throws IOException {

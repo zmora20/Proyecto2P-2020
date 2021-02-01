@@ -57,9 +57,10 @@ public class InicioController implements Initializable {
                     App.setRoot("InterfazAdmin");
                 }
                 else if (usu instanceof Mesero)
-                    
                     App.setRoot("InterfazMesero");
                 
+            }else{
+                App.setRoot("nohay");
             }
         }
         

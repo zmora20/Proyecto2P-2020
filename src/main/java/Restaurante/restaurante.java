@@ -28,9 +28,7 @@ public class restaurante {
     
     public static ArrayList<Usuario> generarLista(){
         ArrayList<Usuario> lista = new ArrayList<>();
-        //usamos BufferedReader para leer archivos
-        try{
-            
+        try{      
             URL u = App.class.getResource(ruta);
             File file = new File(u.toURI());
             
@@ -53,6 +51,7 @@ public class restaurante {
         }
         return lista;
     }
+    
     
     
     

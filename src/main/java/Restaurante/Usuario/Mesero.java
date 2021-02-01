@@ -17,7 +17,9 @@ public class Mesero extends Usuario{
         super(correoElectronico,contrasenia,nombre);
         
     }
-
     
+    public String GetIdentificacion(){
+        return getNombre();
+    }
     
 }

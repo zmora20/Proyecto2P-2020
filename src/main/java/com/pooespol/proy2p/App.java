@@ -17,15 +17,9 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-<<<<<<< Updated upstream
-         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("bebidas.fxml"));
-            Parent root = fxmlLoader.load();
-        //scene = new Scene(loadFXML("primary"), 640, 480);
-=======
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("bebidas.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("inicio.fxml"));
         Parent root = fxmlLoader.load();
->>>>>>> Stashed changes
-        scene= new Scene(root);
+        scene = new Scene(root, 700, 500);
         stage.setScene(scene);
         stage.show();
     }

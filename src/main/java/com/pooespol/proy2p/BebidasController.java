@@ -42,9 +42,7 @@ public class BebidasController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-<<<<<<< Updated upstream
-      
-=======
+
     }
 
     /*
@@ -96,7 +94,7 @@ public class BebidasController implements Initializable {
         
         
         
-    } 
+    } */
     
     
     
