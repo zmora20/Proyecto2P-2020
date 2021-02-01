@@ -155,18 +155,14 @@ public class InterfazAdminController implements Initializable {
 
     @FXML
     private void crearMesa(MouseEvent event) {
-        circulos.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        Circle c= new Circle(it.getCapacidadMesa()*9,Color.RED);
-                        Label l=new Label(String.valueOf(it.getNumeroMesa()));
-                        StackPane st=new StackPane();
-                        st.getChildren().addAll(c,l);
-                        circulos.getChildren().add(st);
-                        
-                    }
-        
-                    });
+        /*circulos.setOnMouseClicked((MouseEvent event1) -> {
+            
+            Circle c= new Circle(it.getCapacidadMesa()*9,Color.RED);
+            Label l=new Label(String.valueOf(it.getNumeroMesa()));
+            StackPane st=new StackPane();
+            st.getChildren().addAll(c,l);
+            circulos.getChildren().add(st);
+        });*/
     }
 
     

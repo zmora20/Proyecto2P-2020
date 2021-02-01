@@ -2,5 +2,5 @@ rojo;1;4;fabricio
 amarillo;2;5;X
 amarillo;3;3;X
 rojo;4;2;fabricio
-rojo;5;2;X
+rojo;5;2;fabricio
 amarillo;6;3;X

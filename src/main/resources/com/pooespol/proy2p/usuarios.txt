@@ -1,3 +1,3 @@
-frquimis@espol.edu.ec;c;fabricio;MESERO
+frquimis@espol.edu.ec;frquimis;fabricio;MESERO
 frquimis@gmail.com;123;ricardo;ADMINISTRADOR
 fabricioqui@outlook.com;123ri;richard;ADMINISTRADOR

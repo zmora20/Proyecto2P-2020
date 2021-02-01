@@ -6,6 +6,7 @@
 package com.pooespol.proy2p;
 
 import Restaurante.Platos;
+import Restaurante.Ventas;
 import Restaurante.restaurante;
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,6 +19,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -34,6 +36,7 @@ import javafx.scene.layout.VBox;
  * @author zaida
  */
 public class BebidasController implements Initializable {
+    ArrayList<Platos> suma= new ArrayList<>();
 
     @FXML
     private FlowPane panelbebidas;
@@ -45,6 +48,10 @@ public class BebidasController implements Initializable {
     private VBox venta;
     @FXML
     private AnchorPane resultado;
+    @FXML
+    private HBox total;
+    @FXML
+    private Button FINALIZAR;
 
     /**
      * Initializes the controller class.
@@ -86,7 +93,7 @@ public class BebidasController implements Initializable {
         
     }  
      public void mostrarPrecios(Platos p){
-         ArrayList<Platos> suma= new ArrayList<>();
+         
          suma.add(p);
           double total=0;
        for (Platos pe:suma){ 
@@ -106,5 +113,15 @@ public class BebidasController implements Initializable {
        
        
      }
+
+    @FXML
+    private void fin(MouseEvent event) {
+        //Ventas ven= new Ventas ();
+    }
+
+    @FXML
+    private void InterfazMESE(MouseEvent event) throws IOException {
+        App.setRoot("InterfazMesero");
+    }
     
 }

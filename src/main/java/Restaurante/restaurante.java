@@ -127,9 +127,7 @@ public class restaurante {
         }catch(Exception ex){
             System.out.println(ex);
         }
-        for(Mesas m:mesas){
-            System.out.println(m.mesero);
-        }
+        
         return mesas;
     }
      

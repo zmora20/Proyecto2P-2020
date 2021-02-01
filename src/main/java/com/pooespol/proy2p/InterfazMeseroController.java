@@ -6,6 +6,7 @@
 package com.pooespol.proy2p;
 
 import Restaurante.Mesas;
+import Restaurante.Usuario.Mesero;
 import Restaurante.restaurante;
 import static com.pooespol.proy2p.App.scene;
 import java.io.IOException;
@@ -45,10 +46,10 @@ public class InterfazMeseroController implements Initializable {
        ArrayList<Mesas> mesas=res.leerMesas();
         int contadorX=0;
         int contadorY=50;
-        obtenerUsuario();
-        
+        //obtenerUsuario();
         for (Mesas it:mesas){
             if (it.color.equals("rojo")){
+            
                 
                 Circle c= new Circle(it.getCapacidadMesa()*9,Color.RED);
                 Label l=new Label(String.valueOf(it.getNumeroMesa()));
@@ -99,10 +100,10 @@ public class InterfazMeseroController implements Initializable {
             scene.setRoot(root);
             
             InicioController mi = loader.getController();
-            String su =mi.getTxtUsuario();
-            System.out.println(su);
-            System.out.println("hola");
-            
+            ArrayList<Mesero> su =mi.getMesinicio();
+            for (Mesero i :su){
+                System.out.println(i+"hola");
+            }
         } catch (IOException ex) { 
             System.err.println(ex);
         }

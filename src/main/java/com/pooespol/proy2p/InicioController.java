@@ -35,6 +35,15 @@ public class InicioController implements Initializable {
     @FXML
     private Button Inicio;
     restaurante res=new restaurante();
+    private ArrayList<Mesero> mesinicio;
+
+    public ArrayList<Mesero> getMesinicio() {
+        return mesinicio;
+    }
+
+    public void setMesinicio(ArrayList<Mesero> mesinicio) {
+        this.mesinicio = mesinicio;
+    }
     @FXML
     private Label nohay;
 
@@ -66,6 +75,7 @@ public class InicioController implements Initializable {
                 }
                 else if (usu instanceof Mesero){
                     App.setRoot("InterfazMesero");
+                    mesinicio.add((Mesero)usu);
                 }                
             
                 
