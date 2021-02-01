@@ -96,11 +96,8 @@ public class InterfazAdminController implements Initializable {
                 
                 circulos.getChildren().add(st);
                 
-                st.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                    @Override
-                    public void handle(MouseEvent event) {
-                        cargarDatos(it);
-                    }
+                st.setOnMouseClicked((MouseEvent event) -> {
+                    cargarDatos(it);
                 });
                 if (contadorX<=4){
                     st.setLayoutX((contadorX*100)+50);
@@ -124,19 +121,21 @@ public class InterfazAdminController implements Initializable {
             Mesero m=mesa.mesero;
             String nombre=m.GetIdentificacion();
             
-            if (!m.equals(null)){
+            if (m.equals(null)){
+                Label l1=new Label("Capacidad de Mesa: "+String.valueOf(mesa.getCapacidadMesa()));
+                Label l2=new Label("# de mesa: "+String.valueOf(mesa.getNumeroMesa()));
+                VBox v=new VBox(l1,l2);
+                informacion.getChildren().add(v);
+                
+                
+            }else{
                 Label l1=new Label("Capacidad de Mesa: "+String.valueOf(mesa.getCapacidadMesa()));
                 Label l2=new Label("# de mesa: "+String.valueOf(mesa.getNumeroMesa()));
                 Label l=new Label("Mesero: "+nombre);
                 VBox v=new VBox(l1,l2,l);
                 informacion.getChildren().add(v);
-                
-            }else{
-                Label la=new Label("Capacidad de Mesa: "+String.valueOf(mesa.getCapacidadMesa()));
-                Label la1=new Label("# de mesa: "+String.valueOf(mesa.getNumeroMesa()));
-                VBox va=new VBox(la,la1);
-                informacion.getChildren().add(va);
             }
+            
                 
             
         
@@ -156,13 +155,18 @@ public class InterfazAdminController implements Initializable {
 
     @FXML
     private void crearMesa(MouseEvent event) {
-        /*circulos.setOnMouseClicked(new EventHandler<MouseEvent>() {
+        circulos.setOnMouseClicked(new EventHandler<MouseEvent>() {
                     @Override
                     public void handle(MouseEvent event) {
+                        Circle c= new Circle(it.getCapacidadMesa()*9,Color.RED);
+                        Label l=new Label(String.valueOf(it.getNumeroMesa()));
+                        StackPane st=new StackPane();
+                        st.getChildren().addAll(c,l);
+                        circulos.getChildren().add(st);
                         
                     }
         
-                    }*/
+                    });
     }
 
     
