@@ -1,11 +1,10 @@
-Bloody Mary;5.84;Bloody Mary.JPG
 Caipirinha;5.84;Caipirinha.jpg
-Capuccino;3.66;Capuccino.JPG
-Coffee;3.66;Coffee.JPG
-Cosmopolitan;5.84;Cosmopolitan.JPG
+Capuccino;3.66;Capuccino.jpg
+Coffee;3.66;Coffee.jpg
+Cosmopolitan;5.84;Cosmopolitan.jpg
 Cuba Libre;5.84;Cuba Libre.jpg
-Daiquiri;5.84;Daiquiri.JPG
+Daiquiri;5.84;Daiquiri.jpg
 Espresso;3.66;Espresso.jpg
-Green Tea;3.66;Green Tea.JPG
+Green Tea;3.66;Green Tea.jpg
 Irish Coffee;3.66;Irish Coffee.jpg
-Manhattan;5.84;Manhattan.PNG
+Manhattan;5.84;Manhattan.png
